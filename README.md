@@ -2,13 +2,14 @@
 
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
-"Basic" is a user-friendly C++ library designed to simplify console interactions. It provides functions for text printing and character-by-character typing, ideal for interactive console applications.
+"Basic" is a user-friendly C++ library designed to simplify console interactions. It provides functions for text printing, character-by-character typing, and a progress bar function, ideal for interactive console applications.
 
 ## Features
 
 - Print text to the console with the `print` function.
 - Type out text character by character with the `type_write` functions, allowing for animations and interactive effects.
-- Control typing speed with customizable delay options.
+- Display a progress bar with the `progress_bar` function to visualize task completion.
+- Control typing speed and progress bar animation with customizable options.
 
 ## Installation
 
@@ -33,6 +34,11 @@ type_write("Welcome to the Basic library!");
 Typing Text with Custom Delay
 ```cpp
 type_write("Custom speed typing...", 25);  // 25 ms delay between characters
+```
+
+Displaying a Progress Bar
+```cpp
+progress_bar(50, 100, 50);
 ```
 
 ## License
