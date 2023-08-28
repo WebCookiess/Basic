@@ -41,6 +41,41 @@ Displaying a Progress Bar
 progress_bar(50, 100, 50);
 ```
 
+# Example
+```cpp
+#include "basic.h" // Include the header file here
+
+int main()
+{
+    // Set up your sentences and other variables here
+    std::string sentence1 = "Hello, welcome to the presentation!\n";
+    std::string sentence2 = "This is an example of typing text.\n";
+    std::string sentence3 = "Let's display a progress bar.\n";
+
+    // Print a sentence
+    print(sentence1);
+
+    // Type out a sentence with default speed
+    type_write(sentence2);
+
+    // Type out a sentence with custom speed
+    type_write(sentence3, 30); // 30 milliseconds delay
+
+    int progress = 0;
+
+    while (run)
+    {
+        progress += 1;
+        progress_bar(progress, 100, 30); // 30 characters wide progress bar
+        Sleep(16); // Delay for visualization
+        if (progress >= 100)
+            break;
+    }
+
+    return 0;
+}
+```
+
 ## License
 This project is licensed under the Apache License 2.0.
 
